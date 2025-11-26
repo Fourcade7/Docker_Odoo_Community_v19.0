@@ -407,7 +407,7 @@ class DebtDetails(models.Model):
                 print(reminder_date)
                 if reminder_date == today:
                     # Send email logic here
-                    template = self.env.ref('dms.email_template')
+                    template = self.env.ref('debt_management.email_template')
                     self.env['mail.template'].browse(template.id).send_mail(record.id, force_send=True)
 
     # View for Emi Records

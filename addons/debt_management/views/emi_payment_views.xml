@@ -23,14 +23,14 @@
         <field name="name">debt.emi.history.tree</field>
         <field name="model">debt.emi.history</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="loan_id"/>
                 <field name="due_date"/>
                 <field name="payment_amount"/>
                 <field name="advance_payment"/>
                 <field name="remaining_debt"/>
                 <field name="payment_status"/>
-            </tree>
+            </list>
         </field>
     </record>
 

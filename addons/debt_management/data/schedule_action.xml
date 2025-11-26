@@ -3,13 +3,12 @@
     <data>
         <record id="ir_cron_send_emi_reminder" model="ir.cron">
             <field name="name">Send EMI Reminder Emails</field>
-            <field name="model_id" ref="dms.model_debt_details"/>
+            <field name="model_id" ref="debt_management.model_debt_details"/>
             <field name="state">code</field>
             <field name="code">model.send_emi_reminder_email()</field>
             <field name="interval_number">1</field>
             <field name="interval_type">days</field>
-            <field name="numbercall">-1</field>
-            <field name="doall" eval="False"/>
+            <field name="active" eval="True"/>
         </record>
 
         <record id="ir_cron_update_emi_dates_daily" model="ir.cron">
@@ -23,5 +22,7 @@
             <field name="nextcall"
                    eval="(datetime.now() + timedelta(seconds=10)).strftime('%Y-%m-%d %H:%M:%S')"/> <!-- First run immediately -->
         </record>
+
+
     </data>
 </odoo>

@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-
     <record id="view_debt_details_tree" model="ir.ui.view">
-        <field name="name">debt.detail.tree</field>
+        <field name="name">debt.details.tree</field>
         <field name="model">debt.details</field>
         <field name="arch" type="xml">
-            <tree multi_edit="1" decoration-muted="statusbar == 'complete'"
+            <list multi_edit="1" decoration-muted="statusbar == 'complete'"
                   decoration-success="statusbar == 'complete'">
                 <field name="loan_no" optional="show"/>
                 <field name="sanctioned_amount" sum="Sanctioned Amount" optional="show"/>
@@ -32,7 +31,7 @@
                 <field name="advance_amount" optional="hide"/>
                 <field name="total_payable" optional="hide"/>
                 <field name="receipt" optional="hide"/>
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -124,12 +123,12 @@
         <field name="name">Debt Detail</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">debt.details</field>
-        <field name="view_mode">tree,form</field>
-        <field name="context"></field>
+        <field name="view_mode">list,form</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 create your first debt !
             </p>
         </field>
     </record>
+
 </odoo>

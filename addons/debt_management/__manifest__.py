@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 {
     'name': 'Debt Management System',
-    'version': '17.0.0.1.0',
+    'version': '19.1.0',
     'category': 'Finance',
     'summary': 'This module is used to manage Debt.',
     'author': "Namah Softech Private Limited",
@@ -12,7 +12,7 @@
         organizations. It provides a centralized platform for tracking outstanding debts, monitoring payment schedules,
         and automating reminders for upcoming payments. 
     """,
-    'depends': ['snailmail','mail', 'base'],
+    'depends': ['mail', 'base'],
     'sequence': 0,
     'data': [
         'security/ir.model.access.csv',

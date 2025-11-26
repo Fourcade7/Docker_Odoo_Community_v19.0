@@ -4,6 +4,7 @@ import os
 import pandas as pd
 from odoo import models, api
 
+
 def post_init_hook(env):
     import_bank_names(env)
 
@@ -17,13 +18,15 @@ def import_bank_names(env):
         'Nbfc_Companies_233-464.xlsx',
         'Nbfc_Companies_465-end.xlsx'
     ]
-
+    print('FOUND FILES')
 
     for ex_file in excel_files:
+        print('STARTED ROLLING')
         try:
             excel_file_path = os.path.join(excel_folder_path, ex_file)
             bank_names = read_bank_names_from_excel(excel_file_path)
             insert_bank_names_to_res_bank(env, bank_names)
+            print('ROLLING OUT --------')
         except Exception as e:
             print(f"Error processing file {ex_file}: {e}")
 

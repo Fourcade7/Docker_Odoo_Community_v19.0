@@ -3,7 +3,7 @@
     <menuitem id="menu_debt_master"
               name="Debt Management System"
               sequence="0"
-              web_icon="dms,static/description/icon.png"
+              web_icon="debt_management,static/description/icon.png"
     />
     <menuitem id="menu_debt_detail"
               action="action_debt_detail"
