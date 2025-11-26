@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="view_debt_details_tree" model="ir.ui.view">
+        <field name="name">debt.detail.tree</field>
+        <field name="model">debt.details</field>
+        <field name="arch" type="xml">
+            <tree multi_edit="1" decoration-muted="statusbar == 'complete'"
+                  decoration-success="statusbar == 'complete'">
+                <field name="loan_no" optional="show"/>
+                <field name="sanctioned_amount" sum="Sanctioned Amount" optional="show"/>
+                <field name="actual_amount" sum="Actual Amount" optional="show"/>
+                <field name="remaining_amount" sum="Remaining Amount" optional="show"/>
+                <field name="loan_type" optional="show"/>
+                <field name="loan_bank" optional="show"/>
+                <field name="starting_date" optional="show"/>
+                <field name="loan_tenor" optional="show"/>
+                <field name="first_emi" optional="hide"/>
+                <field name="emi_date" optional="show"/>
+                <field name="interest_rate" avg="Avg Interest" optional="show"/>
+                <field name="emi_amount" optional="show"/>
+                <field name="emi_remaining" sum="Remaining Emi" optional="show"/>
+                <field name="remaining_debt" sum="Remaining Debt" optional="show"/>
+                <field name="total_debt" sum="Total Debt" optional="show"/>
+                <field name="statusbar" optional="show" decoration-info="statusbar == 'complete'"
+                       decoration-success="statusbar == 'in_progress'" widget="badge"/>
+                <field name="penalty_applicable" optional="hide"/>
+                <field name="advance_pay" optional="hide"/>
+                <field name="penalty_percentage" optional="hide"/>
+                <field name="gst_percentage" optional="hide"/>
+                <field name="advance_type" optional="hide"/>
+                <field name="advance_amount" optional="hide"/>
+                <field name="total_payable" optional="hide"/>
+                <field name="receipt" optional="hide"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_debt_details_form" model="ir.ui.view">
+        <field name="name">debt.detail.form</field>
+        <field name="model">debt.details</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <!-- You can add more buttons here if needed -->
+                    <field name="statusbar" widget="statusbar" class="oe_highlight" options="{'clickable' : '1'}"/>
+                    <button name="action_generate_emi_report" type="object" string="Generate EMI Report"
+                            class="btn-primary"/>
+
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_emi" string="View EMI Records" type="object"
+                                class="oe_stat_button"
+                                icon="fa-regular fa-credit-card">
+                            <field name="emi_paid" widget="statinfo"/>
+                        </button>
+                    </div>
+
+                    <div class="oe_title">
+                        <label class="o_form_label" for="loan_no" string="Loan No"/>
+                        <h1>
+                            <field name="loan_no" placeholder="Loan No..."/>
+                        </h1>
+
+                    </div>
+
+                    <group>
+                        <group>
+                            <field name="document"/>
+                            <field name="sanctioned_amount"/>
+                            <field name="actual_amount"/>
+                            <field name="remaining_amount"/>
+                            <field name="loan_type"/>
+                            <field name="loan_bank"/>
+                            <field name="starting_date"/>
+                            <field name="loan_tenor"/>
+                            <field name="first_emi"/>
+                        </group>
+                        <group>
+                            <field name="emi_date"/>
+                            <field name="last_date"/>
+                            <field name="interest_rate"/>
+                            <field name="emi_amount"/>
+                            <field name="emi_remaining"/>
+                            <field name="total_interest" sum="Total Interest"/>
+                            <field name="total_debt" sum="Total Debt"/>
+                            <field name="remaining_debt"/>
+                            <field name="advance_pay"/>
+                        </group>
+                    </group>
+
+                    <notebook>
+                        <page string="Advance Details">
+                            <group>
+                                <group>
+                                    <field name="penalty_applicable" invisible="not advance_pay"/>
+                                    <field name="penalty_percentage" invisible="penalty_applicable != 1"/>
+                                    <field name="gst_percentage" invisible="penalty_applicable != 1"/>
+                                    <field name="advance_type" invisible="not advance_pay"/>
+                                    <field name="reduction_type" invisible="advance_type != 'partial' "/>
+                                    <field name="advance_amount"
+                                           invisible="advance_type != 'partial' "/>
+                                    <field name="total_payable" invisible="not advance_pay"/>
+                                    <field name="receipt" string="Receipt"/>
+                                </group>
+                                <group>
+                                    <field name="email"/>
+                                    <field name="reminder_days"
+                                           string="Reminder Days Before EMI Due"/>
+                                    <button name="action_done" class="oe_highlight" type="object"
+                                            string="Advance PAID"
+                                            invisible="not advance_pay or statusbar != 'in_progress' "></button>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_debt_detail" model="ir.actions.act_window">
+        <field name="name">Debt Detail</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">debt.details</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context"></field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                create your first debt !
+            </p>
+        </field>
+    </record>
+</odoo>

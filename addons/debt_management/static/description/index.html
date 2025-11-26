@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debt Management System</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+          integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css"/>
+    <link rel="stylesheet" href="assets/animation/dist/aos.css"/>
+    <style>
+        .oe_container {
+            margin: 20px;
+        }
+
+        .bi_title {
+            font-size: 45px;
+            color: #875A7B;
+        }
+
+        .oe_slogan {
+            font-size: 16px;
+        }
+
+        .list-group {
+            list-style-type: disc;
+            padding-left: 20px;
+            border: none
+        }
+
+        .list-group-item li {
+            margin-bottom: 8px;
+            border: none
+        }
+
+        .panel-heading {
+            cursor: pointer;
+        }
+
+        .panel-body {
+            display: none;
+        }
+
+        .panel-heading.active+.panel-body {
+            display: block;
+        }
+
+        a {
+            font-size: 1rem;
+            font-weight: 400;
+            text-decoration: none;
+            list-style: none;
+            color: black;
+        }
+
+        /*16px regular*/
+        a:hover {
+            color: #875A7B;
+            transition: .7s;
+        }
+    </style>
+</head>
+
+<body>
+<section class="index-banner shadow-sm position-relative mt40"
+         style="border-bottom:4px solid #875A7B; border-radius: 10px;">
+    <img class="w-100 h-100 position-absolute img-fluid mb16" src="bg-img.png" style="border-radius: 10px;"/>
+    <div class="container p-md-4 p-4 position-relative">
+        <div class="row align-items-end">
+            <div class="col-md-3 text-center text-md-left">
+                <img src="logo.png" alt="Namah Softech pvt ltd" class="img img-fluid"
+                     style="height: 80px; margin:10px 0">
+            </div>
+
+            <div class="col-md-3 text-center text-md-left"
+                 style="margin-left: auto;padding-right: 10px; padding-left: 10px;">
+                <h5 style="font-size:18px;margin:10px 0">
+                        <span class="badge badge-pill badge-light w-md-100 w-auto"
+                              style="color:#ffffff; background-color:#875A7B; border-radius:0.5rem; padding:1rem">
+                            <i class="fa fa-check"></i>&nbsp;Enterprise </span>
+                </h5>
+            </div>
+            <div class="col-md-3 text-center text-md-left" style="padding-right: 10px; padding-left: 10px;">
+                <h5 style="font-size:18px;margin:10px 0">
+                        <span class="badge badge-pill badge-light w-md-100 w-auto"
+                              style="color:#ffffff; background-color:#875A7B; border-radius:0.5rem; padding:1rem;"><i
+                                class="fa fa-check"></i>&nbsp;Odoo.sh</span>
+                </h5>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- <section class="oe_container lead">
+    <div class="text-center">
+        <picture>
+            <source srcset="hms-essentials.webp"/>
+            <source srcset="hms-essentials.png"/>
+            <img class="img-fluid" src="hms-essentials.png" alt="hms essetials" />
+        </picture>
+    </div>
+</section> -->
+
+<section class="oe_container lead bi_title_box ">
+    <p class="oe_slogan fs-5 mt-5 " align="center" style="justify-content: center;">
+        "This Debt Management System helps streamline the management of debts and loans for individuals and
+        organizations. It provides a centralized platform for tracking outstanding debts, monitoring payment schedules,
+        and automating reminders for upcoming payments. With user-friendly interfaces and robust functionalities, the
+        system enhances efficiency, reduces the risk of missed payments, and ultimately supports better financial health
+        for both lenders and borrowers."</p>
+</section>
+
+<div class="container mt-5">
+    <h2 class="mx-4 mt-2 mb-5 text-center">Key Features</h2>
+    <div class="row mb-5">
+
+        <!-- Column 1 -->
+        <div class="col-md-6">
+            <ul class="list-group">
+                <li class="list-group-item border-0">
+                    <div class="row">
+                        <div class="col-2">
+                            <div class="d-flex align-items-center justify-content-center "
+                                 style="width:36px; height:36px; border-radius:50%; background-color:#875A7B; margin-left:20px">
+                                <i class="fa fa-star" style="color:#fff; font-size:20px" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="col-10 text-start">
+                            <h5 class="pt-1">Debt Tracking.</h5>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="list-group-item border-0">
+                    <div class="row">
+                        <div class="col-2">
+                            <div class="d-flex align-items-center justify-content-center "
+                                 style="width:36px; height:36px; border-radius:50%; background-color:#875A7B; margin-left:20px">
+                                <i class="fa fa-star" style="color:#fff; font-size:20px" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="col-10 text-start">
+                            <h5 class="pt-1">Automated Payment Reminders</h5>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="list-group-item border-0">
+                    <div class="row">
+                        <div class="col-2">
+                            <div class="d-flex align-items-center justify-content-center "
+                                 style="width:36px; height:36px; border-radius:50%; background-color:#875A7B; margin-left:20px">
+                                <i class="fa fa-star" style="color:#fff; font-size:20px" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="col-10 text-start">
+                            <h5 class="pt-1">User-Friendly Interface</h5>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item border-0">
+                    <div class="row">
+                        <div class="col-2">
+                            <div class="d-flex align-items-center justify-content-center "
+                                 style="width:36px; height:36px; border-radius:50%; background-color:#875A7B; margin-left:20px">
+                                <i class="fa fa-star" style="color:#fff; font-size:20px" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="col-10 text-start">
+                            <h5 class="pt-1">Excel Report Generation</h5>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- Column 2 -->
+        <div class="col-md-6">
+            <ul class="list-group">
+                <li class="list-group-item border-0">
+                    <div class="row">
+                        <div class="col-2">
+                            <div class="d-flex align-items-center justify-content-center "
+                                 style="width:36px; height:36px; border-radius:50%; background-color:#875A7B; margin-left:20px">
+                                <i class="fa fa-star" style="color:#fff; font-size:20px" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="col-10 text-start">
+                            <h5 class="pt-1">Emi Calculation</h5>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item border-0">
+                    <div class="row">
+                        <div class="col-2">
+                            <div class="d-flex align-items-center justify-content-center "
+                                 style="width:36px; height:36px; border-radius:50%; background-color:#875A7B; margin-left:20px">
+                                <i class="fa fa-star" style="color:#fff; font-size:20px" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="col-10 text-start">
+                            <h5 class="pt-1">Emi History.</h5>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item border-0">
+                    <div class="row">
+                        <div class="col-2">
+                            <div class="d-flex align-items-center justify-content-center "
+                                 style="width:36px; height:36px; border-radius:50%; background-color:#875A7B; margin-left:20px">
+                                <i class="fa fa-star" style="color:#fff; font-size:20px" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="col-10 text-start">
+                            <h5 class="pt-1">Outstanding Emi Count.</h5>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<section class="oe_container oe_mt32">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan fw-bold" style="color:#875A7B;"></h2>
+        <div class="oe_span12 ">
+
+            <section class="index-banner shadow-sm position-relative mt40"
+                     style="border-bottom:4px solid #875A7B;; border-radius: 10px;">
+                <img class="w-100 h-100 position-absolute img-fluid" src="bg-img.png"
+                     style="border-radius: 10px;"/>
+                <div class="container p-md-5 p-4 position-relative">
+                    <div class="row align-items-center" style="transform: scale(1)">
+                        <div class="col-md-12">
+                            <p class="oe_mt32 oe_mb32 text-start rounded"
+                               style="font-size: x-large; color: white; background-color: #875A7B; ">&nbsp;
+                                A loan form view</p>
+                        </div>
+                        <div class="col-md-12" style="transform: translate(0,-31px);">
+                            <img src="form_view.png" alt="" class="img img-fluid"
+                                 style="min-height: 280px; ">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="index-banner shadow-sm position-relative mt40"
+                     style="border-bottom:4px solid #875A7B;; border-radius: 10px;">
+                <img class="w-100 h-100 position-absolute img-fluid" src="bg-img.png"
+                     style="border-radius: 10px;"/>
+                <div class="container p-md-5 p-4 position-relative ">
+                    <div class="row align-items-center " style="transform: scale(1)">
+                        <div class="col-md-12">
+                            <p class="oe_mt32 oe_mb32 text-start rounded"
+                               style="font-size: x-large; color: white; background-color: #875A7B; ">Tree
+                                view is a tabular display that lists visitor records in rows, showing key details
+                                like loan number, sanctioned amount, loan tenure, and emi amount, allowing quick,
+                                organized access to loan data.</p>
+                        </div>
+                        <div class="col-md-12" style="transform: translate(0,-31px);">
+                            <img src="tree_view.png" alt="" class="img img-fluid"
+                                 style="min-height: 280px; ">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="index-banner shadow-sm position-relative mt40"
+                     style="border-bottom:4px solid #875A7B;; border-radius: 10px;">
+                <img class="w-100 h-100 position-absolute img-fluid" src="bg-img.png"
+                     style="border-radius: 10px;"/>
+                <div class="container p-md-5 p-4 position-relative">
+                    <div class="row align-items-center" style="transform: scale(1)">
+                        <div class="col-md-12">
+                            <p class="oe_mt32 oe_mb32 text-start rounded"
+                               style="font-size: x-large; color: white; background-color: #875A7B; ">Loan Details can be
+                                filled with loan number, sanctioned amount, loan tenure, first emi date, etc. To get the
+                                emi amount and remaining emi's</p>
+                        </div>
+                        <div class="col-md-12" style="transform: translate(0,-31px);">
+                            <img src="without_advance.png" alt="" class="img img-fluid"
+                                 style="min-height: 280px; ">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="index-banner shadow-sm position-relative mt40"
+                     style="border-bottom:4px solid #875A7B;; border-radius: 10px;">
+                <img class="w-100 h-100 position-absolute img-fluid" src="bg-img.png"
+                     style="border-radius: 10px;"/>
+                <div class="container p-md-5 p-4 position-relative">
+                    <div class="row align-items-center" style="transform: scale(1)">
+                        <div class="col-md-12">
+                            <p class="oe_mt32 oe_mb32 text-start rounded"
+                               style="font-size: x-large; color: white; background-color: #875A7B; ">Also supports
+                                advance payment be it partial or full also computes GST based on the GST percentage if
+                                applicable. </p>
+                        </div>
+                        <div class="col-md-12" style="transform: translate(0,-31px);">
+                            <img src="with_advance.png" alt="blood campaign" class="img img-fluid"
+                                 style="min-height: 280px;">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="index-banner shadow-sm position-relative mt40"
+                     style="border-bottom:4px solid #875A7B;; border-radius: 10px;">
+                <img class="w-100 h-100 position-absolute img-fluid" src="bg-img.png"
+                     style="border-radius: 10px;"/>
+                <div class="container p-md-5 p-4 position-relative">
+                    <div class="row align-items-center" style="transform: scale(1)">
+                        <div class="col-md-12">
+                            <p class="oe_mt32 oe_mb32 text-start rounded"
+                               style="font-size: x-large; color: white; background-color: #875A7B; ">Allows for
+                                customizable scheduling of reminders before the EMI due date, whether it's set for 5
+                                days or 15 days.</p>
+                        </div>
+                        <div class="col-md-12" style="transform: translate(0,-31px);">
+                            <img src="reminder.png" alt="blood campaign" class="img img-fluid"
+                                 style="min-height: 280px;">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="index-banner shadow-sm position-relative mt40"
+                     style="border-bottom:4px solid #875A7B;; border-radius: 10px;">
+                <img class="w-100 h-100 position-absolute img-fluid" src="bg-img.png"
+                     style="border-radius: 10px;"/>
+                <div class="container p-md-5 p-4 position-relative">
+                    <div class="row align-items-center" style="transform: scale(1)">
+                        <div class="col-md-12">
+                            <p class="oe_mt32 oe_mb32 text-start rounded"
+                               style="font-size: x-large; color: white; background-color: #875A7B; ">Total of all the
+                                debt/loan is shown in tree form for your convenience.</p>
+                        </div>
+                        <div class="col-md-12" style="transform: translate(0,-31px);">
+                            <img src="total.png" alt="blood campaign" class="img img-fluid"
+                                 style="min-height: 280px;">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+</section>
+
+<div class="">
+    <div class="row" style="background-color: #f7e5d3; border-radius: 10px">
+        <div class="col-12 text-center">
+                <span href="https://namahsoftech.com/" target="">
+                    <a href="https://namahsoftech.com/"><img src="namahsoftech.png" width="auto" height="150"></a>
+                </span>
+        </div>
+        <div class="col-12 p-2 deep-2 text-center overflow-hidden mb-4">
+            <h3 class="text-dark">Namah Softech Private Limited.</h3>
+            <h3 class="text-dark">Empower your business with
+                streamlined processes and sustained growth as an Odoo ERP.
+            </h3>
+            <p class="text-dark">Don’t hesitate to reach out if you have any suggestions, concerns, or questions.
+            </p>
+            <div class="d-flex mt-4 mb-4 justify-content-center">
+                <a href="mailto:director@namahsoftech.com" class="me-3"
+                   style="color:#fff; border:1px solid #fff; background-color:#875A7B; border-radius:10px; padding:10px 25px; text-transform:uppercase; font-size:16px; font-weight:500">
+                    <i class="fa fa-envelope me-2" style="font-size:19px; margin: 2px;"></i> Support
+                </a>
+                <a href="skype:live:.cid.6bca8b70954f4f60?chat" class="me-3"
+                   style="background-color:#875A7B; color:#fff; border:1px solid #fff; border-radius:10px; padding:10px 25px; text-transform:uppercase; font-size:16px; font-weight:500">
+                    <i class="fa fa-skype me-2" style="font-size:19px;  margin: 2px"></i> Skype
+                </a>
+                <a href="https://wa.me/8104544899" class=""
+                   style="background-color:#875A7B; color:#fff; border:1px solid #fff; border-radius:10px; padding:10px 25px; text-transform:uppercase; font-size:16px; font-weight:500">
+                    <i class="fa fa-whatsapp me-2" style="font-size:19px; margin: 2px"></i> Whatsapp
+                </a>
+            </div>
+            <h4 class="text-dark"><a href="https://namahsoftech.com/"
+                                     style="color: #875A7B">www.namahsoftech.com</a></h4>
+        </div>
+    </div>
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/animation/dist/aos.js"></script>
+</body>
+
+</html>

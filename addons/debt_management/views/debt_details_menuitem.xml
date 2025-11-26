@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <menuitem id="menu_debt_master"
+              name="Debt Management System"
+              sequence="0"
+              web_icon="dms,static/description/icon.png"
+    />
+    <menuitem id="menu_debt_detail"
+              action="action_debt_detail"
+              name="Debt Details"
+              sequence="0"
+              parent="menu_debt_master"
+    />
+     <menuitem id="emi_payment_menu" name="EMI Payments" parent="menu_debt_master"/>
+     <menuitem id="loan_emi_payment_submenu" name="EMI Payments" parent="emi_payment_menu" action="action_emi_payment"/>
+     <menuitem id="loan_bank_submenu" name="Banks" parent="menu_debt_master" action="base.action_res_bank_form"/>
+</odoo>

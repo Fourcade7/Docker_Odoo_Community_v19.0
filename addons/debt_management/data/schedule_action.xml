@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="ir_cron_send_emi_reminder" model="ir.cron">
+            <field name="name">Send EMI Reminder Emails</field>
+            <field name="model_id" ref="dms.model_debt_details"/>
+            <field name="state">code</field>
+            <field name="code">model.send_emi_reminder_email()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+        </record>
+
+        <record id="ir_cron_update_emi_dates_daily" model="ir.cron">
+            <field name="name">Update EMI Date Daily</field>
+            <field name="user_id" ref="base.user_admin"/> <!-- Run as system user -->
+            <field name="model_id" ref="debt_management.model_debt_details"/> <!-- Reference the correct model XML ID -->
+            <field name="code">model.update_emi_dates_daily()</field> <!-- Code to call the method -->
+            <field name="interval_number">1</field> <!-- Every 1 day -->
+            <field name="interval_type">days</field> <!-- Time unit is in days -->
+            <field name="active" eval="True"/> <!-- Enable the cron job -->
+            <field name="nextcall"
+                   eval="(datetime.now() + timedelta(seconds=10)).strftime('%Y-%m-%d %H:%M:%S')"/> <!-- First run immediately -->
+        </record>
+    </data>
+</odoo>

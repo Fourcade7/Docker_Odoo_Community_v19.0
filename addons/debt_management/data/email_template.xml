@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<odoo>
+    <data>
+    <!-- Mail template are declared in a NOUPDATE block
+         so users can freely customize/delete them -->
+        <record id="email_template" model="mail.template">
+            <field name="name">EMI Reminder Email</field>
+            <field name="model_id" ref="dms.model_debt_details"/>
+            <field name="email_from">${(object.user_id.email or '')|safe}</field>
+            <field name="email_to">${(object.user_id.email or '')|safe}</field>
+            <field name="subject">Reminder: EMI Due for Loan No {{ object.loan_no }}</field>
+            <field name="body_html" type="html">
+                <div>
+                    <p>Hello,</p>
+                    <p>This is a reminder that your EMI payment for loan <t t-esc="object.loan_no"/> is due on <t t-esc="object.emi_date"/>.</p>
+                    <p>Please make the payment before the due date to avoid penalties.</p>
+                    <p>Thank you.</p>
+                </div>
+            </field>
+        </record>
+    </data>
+</odoo>
